@@ -1,0 +1,13 @@
+<h1>Add a CD to <%= @genre.genre() %> </h1>
+
+<form action="/all_cds" method="post">
+  <input id='genre_id' name='genre_id' type='hidden' value='<%= @genre.id() %>'>
+
+  <label for='album'>Album Title:</label>
+  <input id='album' name='album' type='text'>
+
+  <label for='artist'>Artist:</label>
+  <input id='artist' name='artist' type='text'>
+
+  <button type="submit">Add CD</button>
+</form>

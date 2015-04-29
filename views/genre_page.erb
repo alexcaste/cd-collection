@@ -1,0 +1,10 @@
+<h3>Here are CD's in this genre:</h3>
+
+<ul>
+  <% @genre.cds().each() do |cd| %>
+  <li><a href="/all_cds/<%= cd.id() %>"><%= cd.album() %> <%= cd.artist() %></a></li>
+  <% end %>
+</ul>
+
+<a href="/all_genres/<%= @genre.id%>/all_cds/new">Add a new Cd</a>
+<a href="/">Return to Main Page</a>
